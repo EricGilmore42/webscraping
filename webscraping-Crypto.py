@@ -55,10 +55,8 @@ for row in tr:
             input()
     if coin == 'Bitcoin' and float(price.replace('$','').replace(',','')) < 40000:
         textmsg = client.messages.create(to=myNumber,from_=TwilioNumber,body=f'Alert: Bitcoin has fallen below $40,000. Current price is {price}.')
-        print(textmsg.status)
     if coin == 'Ethereum' and float(price.replace('$','').replace(',','')) < 3000:
-        textmsg = client.messages.create(to=myNumber,from_=TwilioNumber,body=f'Alert: Ethereum has fallen below $3,000. Current price is {price}.') 
-        print(textmsg.status)   
+        textmsg = client.messages.create(to=myNumber,from_=TwilioNumber,body=f'Alert: Ethereum has fallen below $3,000. Current price is {price}.')   
     count += 1
 
 
